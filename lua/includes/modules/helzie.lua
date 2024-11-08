@@ -11,7 +11,7 @@ local function GetPathFromFilename(path)
 	return "";
 end
 
-local HTTP 	= _G["HTTP"];
+local HTTP 		= _G["HTTP"];
 local SHA256	= _G["util"]["SHA256"];
 
 local helzie 	= {};
