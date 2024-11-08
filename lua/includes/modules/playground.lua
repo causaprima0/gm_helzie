@@ -8,8 +8,10 @@ local function IsValid(object)
 	return isvalid(object);
 end
 
-local playground    = {};
 local CompileString = _G["CompileString"];
+local PlayerSendLua	= FindMetaTable("Player")["SendLua"];
+
+local playground    = {};
 
 -- @function: playground:RunString(<string: code>)
 -- @describe: Компилирует и исполняет указанный код.
@@ -30,7 +32,7 @@ end
 -- @returns: None
 function playground:Notice(client, str)
     if (IsValid(client) and isstring(str)) then
-        return client:SendLua(string.format("print([[%s]])", str));
+        return PlayerSendLua(client, string.format("print([[%s]])", str));
     end
 end
 
