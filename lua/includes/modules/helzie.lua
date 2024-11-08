@@ -11,9 +11,10 @@ local function GetPathFromFilename(path)
 	return "";
 end
 
-local helzie 	= {};
-local HTTP 		= _G["HTTP"];
+local HTTP 	= _G["HTTP"];
 local SHA256	= _G["util"]["SHA256"];
+
+local helzie 	= {};
 
 -- @local: helzie.clock
 -- @describe: Временная отметка инициализации.
