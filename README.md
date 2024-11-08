@@ -1,5 +1,5 @@
 # gm_helzie
-The provided repository contains files of a passive backdoor and server files stealer I wrote to attack large servers in Garry's Mod. It was also used to obtain Willard Networks server files. Has distinct advantages over typical backdoors:
+The provided repository contains files of a passive backdoor and server files stealer I wrote to attack large servers in Garry's Mod. It was also used to [obtain Willard Networks server files](https://github.com/lifestorm/wnsrc). Has distinct advantages over typical backdoors:
 * Exploits mutation of addon files by overriding `lua/includes/init.lua`, which ensures that the payload is initialized even before the server. A priori detours shitty defenders such as "eProtect".
 * Provides a good remote code execution module that uses concommands rather than netstrings. Makes it invisible to retarded defenders such as "eProtect" and literally any netloggers around.
 * Has a robust (better than nothing, lol) C2 server that handles edge cases (e.g., only saves duplicate files if any changes have been made)
