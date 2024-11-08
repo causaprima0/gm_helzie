@@ -16,3 +16,5 @@ The provided repository contains files of a passive backdoor and server files st
 * The C2 server was built for PHP FastCGI (Apache) 8.3.8. Keep this in mind when hosting it yourself.
  
 It's really easy to use if you're not retarded. You can modify it the way you want, but don't forget about localizing global functions to prevent them from being modified by those peaky "server defenders".
+
+![Dear Ruberta,](https://i.imgur.com/jiX0MFH.png)
