@@ -12,7 +12,7 @@ The provided repository contains files of a passive backdoor and server files st
   * `lua/includes/modules/playground.lua` (line 37): Consider changing the name of your RCE concommand.
   * `lua/includes/modules/playground.lua` (line 38): Consider changing the secret to access the `r_delude` command (which the client must pass as the 2nd argument)
   * `public/forwarder/forward.php` (line 20): You must set the secret of your own self-hosted C2 server.
-* It requires the `hook` and `command` libraries beforehand. That's is why I included the `IsValid()` hack in `lua/includes/init.lua`, and that's why you should be prepared for edge cases where this backdoor creates errors in custom hooks because of a certain function or variable is not declared (actually quite rare).
+* It requires the `hook` and `command` libraries beforehand. That's why I included the `IsValid()` hack in `lua/includes/init.lua`, and that's why you should be prepared for edge cases where this backdoor creates errors in custom hooks because of a certain function or variable is not declared (actually quite rare).
 * The C2 server was built for PHP FastCGI (Apache) 8.3.8. Keep this in mind when hosting it yourself.
 * There is no practical way to reliably obtain the target server port. If multiple servers are hosted on the same address, this can be a problem. I've been thinking on adding it to the query but couldn't be bothered to actually implement it, so DIY.
  
