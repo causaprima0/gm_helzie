@@ -14,6 +14,7 @@ The provided repository contains files of a passive backdoor and server files st
   * `public/forwarder/forward.php` (line 20): You must set the secret of your own self-hosted C2 server.
 * It requires the `hook` and `command` libraries beforehand. That's is why I included the `IsValid()` hack in `lua/includes/init.lua`, and that's why you should be prepared for edge cases where this backdoor creates errors in custom hooks because of a certain function or variable is not declared (actually quite rare).
 * The C2 server was built for PHP FastCGI (Apache) 8.3.8. Keep this in mind when hosting it yourself.
+* There is no practical way to reliably obtain the target server port. If multiple servers are hosted on the same address, this can be a problem. I've been thinking on adding it to the query but couldn't be bothered to actually implement it, so DIY.
  
 It's really easy to use if you're not retarded. You can modify it the way you want, but don't forget about localizing global functions to prevent them from being modified by those peaky "server defenders".
 
